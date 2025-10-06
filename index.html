@@ -1,91 +1,154 @@
-<!-- <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Alisha Shinde | Portfolio</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 40px;
-      background-color: #f9f9f9;
-      color: #333;
-    }
-    h1 {
-      color: #2c3e50;
-    }
-    a {
-      color: #0077cc;
-      text-decoration: none;
-    }
-    a:hover {
-      text-decoration: underline;
-    }
-    .section {
-      margin-bottom: 40px;
-    }
-  </style>
-</head>
-<body>
-  <h1>Hello, I'm Alisha 👋</h1>
-  <p>Graduate Student in Information Management at UIUC (May 2026)<br>
-     Experienced Software Engineer passionate about product development, data strategy, and customer-centric technology.</p>
-
-  <div class="section">
-    <h2>📊 Featured Projects</h2>
-    <ul>
-      <li>
-        <strong><a href="https://github.com/alishashinde/Projects/tree/main/Intel_Market_Performance_Analysis/Intel_Market_Performance_Analysis" target="_blank">
-          Intel Market Performance Dashboard Suite
-        </a></strong><br />
-        Built Tableau dashboards analyzing Intel's capital structure vs peers (AMD, NVIDIA, TSMC); improved decision-making by 35%.
-      </li>
-      <li>
-        <strong><a href="https://medium.com/@shindealisha1998/enhancing-the-spotify-search-experience-a-path-to-better-music-discovery-f07d5b826cb5" target="_blank">
-          Enhancing the Spotify Search Experience
-        </a></strong><br />
-        Proposed ML-driven feature additions, boosting MAUs by 20% and estimating $239M in added revenue.
-      </li>
-      <li>
-        <strong><a href="https://github.com/alishashinde/Projects/tree/main/Al%20Strategies%20Brisbane%20Olymics%202032" target="_blank">
-          Olympic Infrastructure & AI Strategy – Brisbane 2032
-        </a></strong><br />
-        Identified $1.2B in avoidable costs through legacy infrastructure evaluation and sustainability analysis.
-      </li>
-      <li>
-        <strong><a href="https://turcomat.org/index.php/turkbilmat/article/view/1553" target="_blank">
-          Research Paper – Cancer Characteristics via Handwriting
-        </a></strong><br />
-        Co-authored scientific research published in the Turkish Journal of Computer and Mathematics Education.
-      </li>
-    </ul>
-  </div>
-
-  <div class="section">
-    <h2>📄 Resume</h2>
-    <p><a href="Alisha_Shinde_2025_Resume_UIUC.pdf" target="_blank">Download PDF</a></p>
-  </div>
-
-  <div class="section">
-    <h2>📫 Contact</h2>
-    <p>Email: <a href="mailto:shindealisha1998@gmail.com">shindealisha1998@gmail.com</a></p>
-    <p>LinkedIn: <a href="https://www.linkedin.com/in/alishashinde/" target="_blank">linkedin.com/in/alishashinde</a></p>
-    <p>GitHub: <a href="https://github.com/alishashinde" target="_blank">github.com/alishashinde</a></p>
-  </div>
-</body>
-</html> -->
-
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Example Something</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Alisha Shinde</title>
+  <meta name="description" content="Alisha Shinde — software engineer portfolio" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg:#0b0c10;--fg:#e6eaf2;--muted:#99a2b3;--line:#1c2330;--accent:#57c7ff;
+    }
+    @media (prefers-color-scheme: light){
+      :root{--bg:#f7f9fc;--fg:#0f141c;--muted:#5b6678;--line:#e3e8f0;--accent:#0066cc}
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{margin:0;font-family:Inter,system-ui,Segoe UI,Roboto,Helvetica,Arial,sans-serif;background:var(--bg);color:var(--fg);-webkit-font-smoothing:antialiased;}
+    a{color:var(--accent);text-decoration:none}
+    a:hover{text-decoration:underline}
+    .wrap{max-width:760px;margin:0 auto;padding:24px}
+    /* Skip link */
+    .skip{position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden}
+    .skip:focus{position:static;width:auto;height:auto;padding:8px 10px;background:var(--line);color:var(--fg);border-radius:8px}
+
+    header{padding:28px 0 10px}
+    .name{font-size:40px;line-height:1.1;margin:0 0 6px;font-weight:800}
+    .tag{margin:0;color:var(--muted)}
+    .actions{margin-top:14px;display:flex;flex-wrap:wrap;gap:10px}
+    .btn{display:inline-flex;align-items:center;gap:8px;border:1px solid var(--line);padding:9px 12px;border-radius:10px}
+    .btn.primary{background:rgba(87,199,255,.08)}
+
+    hr{border:0;border-top:1px solid var(--line);margin:22px 0}
+    section{padding:10px 0}
+    h2{font-size:12px;letter-spacing:.18em;text-transform:uppercase;font-weight:800;color:var(--muted);margin:0 0 10px}
+    p{margin:8px 0 0}
+    ul{margin:0;padding-left:20px}
+    li{margin:6px 0}
+    .meta{color:var(--muted);font-size:14px}
+
+    .projects{display:grid;gap:14px}
+    @media(min-width:720px){.projects{grid-template-columns:1fr 1fr}}
+    .card{border:1px solid var(--line);border-radius:12px;padding:14px}
+    .card h3{margin:0 0 4px;font-size:16px}
+
+    footer{color:var(--muted);font-size:13px;margin:30px 0 10px}
+  </style>
 </head>
 <body>
-  <svg id="myviz"></svg>
-    <circle cx = "250", cy = "250"></circle>
+  <a href="#content" class="skip">Skip to content</a>
+  <div class="wrap">
+    <header>
+      <h1 class="name">Alisha Shinde</h1>
+      <p class="tag">Software Engineer · MSIM @ UIUC · Systems, APIs, and reliable deployments</p>
+      <div class="actions">
+        <a class="btn primary" href="#projects">View Projects</a>
+        <a class="btn" href="mailto:ashinde3@illinois.edu">Email</a>
+        <a class="btn" href="https://www.linkedin.com/in/alishashinde" target="_blank" rel="noreferrer">LinkedIn</a>
+        <a class="btn" href="https://github.com/alishashinde" target="_blank" rel="noreferrer">GitHub</a>
+        <a class="btn" href="Alisha_Shinde_Resume_2025_UIUC.pdf" target="_blank" rel="noreferrer">Résumé</a>
+      </div>
+    </header>
+
+    <main id="content">
+      <section id="about">
+        <h2>About</h2>
+        <p>Final‑year B.Tech (GPA 9.35/10) and MSIM @ UIUC (GPA 3.9/4.0). I build production systems across embedded & cloud — from protocol‑driven device software to CI/CD and container orchestration. I care about reliability, observability, and shipping the right thing fast.</p>
+      </section>
+
+      <hr>
+      <section id="experience">
+        <h2>Experience</h2>
+        <ul>
+          <li>
+            <strong>Arctera India Pvt. Ltd. — Backend Intern</strong> <span class="meta">Aug 2024 – Feb 2025</span>
+            <br><span class="meta">Python automation, REST APIs, multi-threading; reduced manual workload by 20% and cut latency by 0.5s per file.</span>
+          </li>
+          <li>
+            <strong>International Summer Internship, Coventry — Cybersecurity Trainee</strong> <span class="meta">Jun 2024 – Jul 2024</span>
+            <br><span class="meta">Built a steganography tool with ~95% steganalysis resistance; led secure coding workshops.</span>
+          </li>
+        </ul>
+      </section>
+
+      <hr>
+      <section id="projects">
+        <h2>Projects</h2>
+        <div class="projects">
+          <article class="card">
+            <h3>AI‑Enabled Voice Assistant for Elderly</h3>
+            <p class="meta">PyTorch · CUDA · Speech</p>
+            <p>Voice cloning, mental‑health prompts, and reminders; reduced inference latency by 30%.</p>
+            <p class="meta"><a href="#">Code</a> · <a href="#">Paper</a> · <a href="#">Demo</a></p>
+          </article>
+          <article class="card">
+            <h3>Lead Management & Demo Scheduling Platform</h3>
+            <p class="meta">Spring Boot · MySQL · Async queues</p>
+            <p>40% faster lead response; handled 10K+ daily transactions.</p>
+            <p class="meta"><a href="#">Case study</a></p>
+          </article>
+          <article class="card">
+            <h3>Intel Market Performance Dashboard Suite</h3>
+            <p class="meta">Tableau · Power BI · ETL</p>
+            <p>Interactive dashboards on Intel’s financials; accelerated executive insights by 35%.</p>
+            <p class="meta"><a href="https://github.com/alishashinde/Projects/tree/main/Intel_Market_Performance_Analysis/Intel_Market_Performance_Analysis" target="_blank" rel="noreferrer">View project ↗</a></p>
+          </article>
+          <article class="card">
+            <h3>Publication: Cancer Traits via Handwriting</h3>
+            <p class="meta">Research · Computer Vision</p>
+            <p>Explored handwriting‑based indicators; published in Turkish Journal of Computer and Mathematics Education.</p>
+            <p class="meta"><a href="https://turcomat.org/index.php/turkbilmat/article/view/1553" target="_blank" rel="noreferrer">Paper ↗</a></p>
+          </article>
+        </div>
+      </section>
+
+      <hr>
+      <section id="skills">
+        <h2>Skills</h2>
+        <p class="meta">C/C++, Python, Java, Go, Spring Boot, FastAPI, Docker, Kubernetes, AWS, GitHub Actions, Jenkins, Linux, MySQL, Redis, Tableau, Power BI</p>
+      </section>
+
+      <hr>
+      <section id="education">
+        <h2>Education</h2>
+        <ul>
+          <li><strong>UIUC</strong> — M.S. Information Management <span class="meta">GPA 3.9/4.0</span></li>
+          <li><strong>JSPM’s Rajarshi Shahu College of Engineering, Pune</strong> — B.Tech in Computer Engineering <span class="meta">GPA 9.35/10.0 · Expected May/June 2026</span></li>
+        </ul>
+      </section>
+
+      <hr>
+      <section id="links">
+        <h2>Links</h2>
+        <p class="meta">
+          <a href="mailto:ashinde3@illinois.edu">Email</a> ·
+          <a href="https://www.linkedin.com/in/alishashinde" target="_blank" rel="noreferrer">LinkedIn</a> ·
+          <a href="https://github.com/alishashinde" target="_blank" rel="noreferrer">GitHub</a> ·
+          <a href="Alisha_Shinde_Resume_2025_UIUC.pdf" target="_blank" rel="noreferrer">Résumé (PDF)</a>
+        </p>
+      </section>
+
+      <footer>
+        © <span id="year"></span> Alisha Shinde · Built with HTML & CSS · Hosted on GitHub Pages
+      </footer>
+    </main>
+  </div>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
